@@ -1,6 +1,6 @@
 # TensorFlow-Reco
 
-## Install TensorFlow
+### Install TensorFlow
 To install current release:
 '''
 $ pip install tensorflow
