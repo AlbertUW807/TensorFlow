@@ -49,3 +49,13 @@ def linear_function():
     sess.close()
 
     return result
+
+# Sigmoid function helper
+def sigmoid(z):
+    x = tf.placeholder(tf.float32, name='x')
+    sigmoid = tf.sigmoid(x)
+
+    with tf.Session() as sess:
+        result = sess.run(sigmoid, feed_dict={x: z})
+
+    return result
