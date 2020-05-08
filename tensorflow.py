@@ -59,3 +59,37 @@ def sigmoid(z):
         result = sess.run(sigmoid, feed_dict={x: z})
 
     return result
+
+# Cost of neural network
+def cost(logits, labels):
+    z = tf.placeholder(tf.float32, name='z')
+    y = tf.placeholder(tf.float32, name='y')
+    cost = tf.nn.sigmoid_cross_entropy_with_logits(logits=z, labels=y)
+
+    sess = tf.Session()
+    cost = sess.run(cost, feed_dict={z: logits, y:labels})
+    sess.close()
+    
+    return cost
+
+# One-Hot Encoding
+def one_hot_matrix(labels, C):
+    C = tf.constant(C, name='C')
+    one_hot_matrix = tf.one_hot(indices=labels, depth=C, axis=0)
+    
+    sess = tf.Session()
+    one_hot = sess.run(one_hot_matrix)
+    sess.close()
+
+    return one_hot
+
+# Initialize a vector of 1s
+def ones(shape):
+    ones = tf.ones(shape)
+
+    sess = tf.Session()
+    ones = sess.run(ones)
+    sess.close()
+
+    return ones
+    
