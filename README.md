@@ -24,7 +24,7 @@ import scipy
 from PIL import Image
 from scipy import ndimage
 
-my_image = "your_image.jpg"
+my_image = "your_image.jpg" # make sure image is in the same directory
 fname = "images/" + my_image
 image = np.array(ndimage.imread(fname, flatten=False))
 image = image/255.
