@@ -92,5 +92,3 @@ def ones(shape):
     sess.close()
 
     return ones
-    
-# demo change for tensorflow.py
