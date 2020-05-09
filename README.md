@@ -19,6 +19,7 @@ $ pip install tensorflow-cpu
 
 ### Test your own Image
 ```
+# Additional components/libraries
 import scipy
 from PIL import Image
 from scipy import ndimage
