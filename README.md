@@ -26,9 +26,9 @@ from scipy import ndimage
 
 my_image = "your_image.jpg" # make sure image is in the same directory
 fname = "images/" + my_image
-image = np.array(ndimage.imread(fname, flatten=False))
-image = image/255.
-my_image = scipy.misc.imresize(image, size=(64,64)).reshape((1, 64*64*3)).T
+image = np.array(ndimage.imread(fname, flatten = False))
+image = image / 255.
+my_image = scipy.misc.imresize(image, size = (64, 64)).reshape((1, 64 * 64 * 3)).T
 my_image_prediction = predict(my_image, parameters)
 
 plt.imshow(image)
