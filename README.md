@@ -24,6 +24,8 @@ import scipy
 from PIL import Image
 from scipy import ndimage
 
+# insert image here
+
 my_image = "your_image.jpg" # make sure image is in the same directory
 fname = "images/" + my_image
 image = np.array(ndimage.imread(fname, flatten = False))
